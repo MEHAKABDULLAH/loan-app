@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Form, Input, Button, message } from 'antd';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import '../index.css'
 
 const Login = () => {
@@ -29,7 +29,8 @@ const Login = () => {
         <Form.Item name="password" label="Password" rules={[{ required: true }]}>
           <Input.Password />
         </Form.Item>
-        <Button type="primary" htmlType="submit" block>Login</Button>
+        <Button type="primary" htmlType="submit" block>Login</Button> <br /><br />
+        <p className='text-center'>if you have no account <Link to ={'/register'}>Create One</Link></p>
       </Form>
     </div>
   );
